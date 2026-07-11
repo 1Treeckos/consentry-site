@@ -26,8 +26,8 @@
   <p>Yes — that is the core of the app. Google Consent Mode v2 signals default to
   <i>denied</i> the moment the page loads, Shopify-managed pixels respect the recorded consent,
   and any script you gate with our attribute cannot run until its category is granted.
-  You can verify it yourself: add <code>?consentry_debug=1</code> to any page of your store and
-  watch the live status panel.</p>
+  You can verify it yourself: set a code under the app's settings ("Status panel code"), then open
+  any page with <code>?consentry_debug=YOURCODE</code> and watch the live status panel.</p>
 
   <h2>Will it break my Google Analytics or Ads?</h2>
   <p>No. Consent is passed to Google through Consent Mode v2, which is Google's own mechanism for
@@ -66,8 +66,9 @@
 
   <h2>Still stuck?</h2>
   <p>Email <a href="mailto:luis.miguel.miguel5967@gmail.com">luis.miguel.miguel5967@gmail.com</a> —
-  include your store URL and, if it's about blocking behavior, a screenshot of the
-  <code>?consentry_debug=1</code> panel. That panel usually answers the question on the spot.</p>
+  include your store URL and, if it's about blocking behavior, a screenshot of the status panel
+  (set a "Status panel code" in the app settings, then open <code>?consentry_debug=YOURCODE</code>).
+  That panel usually answers the question on the spot.</p>
 </div>
 </body>
 </html>
