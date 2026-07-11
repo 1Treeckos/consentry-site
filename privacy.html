@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Consentry</title>
+<style>
+  :root { --ink:#0F1720; --muted:#5B6672; --accent:#2DD4BF; --bg:#F6F7F9; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 80px; }
+  h1 { font-size:30px; margin-bottom:4px; letter-spacing:-.02em; }
+  .date { color:var(--muted); font-size:14px; margin-bottom:30px; }
+  h2 { font-size:19px; margin:30px 0 8px; }
+  p, li { color:#333c44; font-size:15.5px; }
+  ul { padding-left:22px; }
+  code { background:#e9edf0; padding:1px 6px; border-radius:5px; font-size:13.5px; }
+  a { color:#0d9488; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy — Consentry</h1>
+  <p class="date">Last updated: July 11, 2026 · Operated by Treeckos · Contact: luis.miguel.miguel5967@gmail.com</p>
+
+  <p>Consentry is a cookie-consent app for Shopify stores. Privacy is the entire point of this
+  product, so this policy is written to be read: it explains exactly what data the app touches,
+  and — more importantly — what it deliberately does not.</p>
+
+  <h2>Data we process about merchants (our customers)</h2>
+  <ul>
+    <li><b>Store identification:</b> your store's <code>.myshopify.com</code> domain and an API access
+      token issued by Shopify when you install the app. These are required for the app to function
+      and are stored in our application database.</li>
+    <li><b>Subscription status:</b> which plan (Free or Pro) your store is on, received from
+      Shopify's billing system and stored as an app metafield on your store.</li>
+    <li><b>Support communication:</b> if you email us, we keep the correspondence.</li>
+  </ul>
+  <p>We do not access your store's customers, orders, products, or any other merchant data.
+  The app requests no data-access scopes beyond what Shopify grants every app by default.</p>
+
+  <h2>Data we process about store visitors (your shoppers)</h2>
+  <p><b>None on our servers.</b> The consent banner runs entirely in the visitor's browser:</p>
+  <ul>
+    <li>Consent choices are recorded by <b>Shopify's Customer Privacy API</b>, which stores them in a
+      first-party cookie (<code>_tracking_consent</code>) in the visitor's browser, managed by Shopify.</li>
+    <li>If Shopify's privacy service is unreachable (for example, blocked by a browser extension),
+      the choice is kept in the visitor's own browser storage (<code>consentry_consent</code>). It
+      contains only the choice itself — no identifiers, and it never leaves the browser.</li>
+    <li>The app signals the visitor's choice to Google tags on the page via Google Consent Mode v2.
+      The app itself sends nothing to Google or to any other third party.</li>
+  </ul>
+  <p>Consentry does not collect, store, transmit, or sell any personal data of store visitors.
+  It contains no analytics or tracking of its own — on storefronts or on this website.</p>
+
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li>Uninstalling the app removes its banner and all of its code from your store immediately.</li>
+    <li>Stored merchant data (store domain, access token, plan) is deleted in response to Shopify's
+      mandatory data-erasure webhooks, at the latest 30 days after uninstall.</li>
+    <li>Visitor-side data (<code>_tracking_consent</code> cookie, browser storage) lives in the
+      visitor's browser and expires or is cleared there; we never hold a copy.</li>
+  </ul>
+
+  <h2>Sharing</h2>
+  <p>We do not sell or share any data with third parties. Our processors are limited to Shopify
+  (platform and billing) and our hosting provider (application database).</p>
+
+  <h2>Your rights</h2>
+  <p>Under the GDPR and similar laws you may request access to, correction of, or deletion of data
+  we hold about you. Email <a href="mailto:luis.miguel.miguel5967@gmail.com">luis.miguel.miguel5967@gmail.com</a>
+  and we will respond within 30 days.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the date above is updated and material changes are noted in the app's
+  changelog.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Consentry</title>
+<style>
+  :root { --ink:#0F1720; --muted:#5B6672; --accent:#2DD4BF; --bg:#F6F7F9; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
+  .wrap { max-width:760px; margin:0 auto; padding:56px 24px 80px; }
+  h1 { font-size:30px; margin-bottom:26px; letter-spacing:-.02em; }
+  h2 { font-size:18px; margin:26px 0 6px; }
+  p, li { color:#333c44; font-size:15.5px; }
+  code, pre { background:#e9edf0; border-radius:6px; font-size:13.5px; }
+  code { padding:1px 6px; }
+  pre { padding:12px 14px; overflow-x:auto; margin-top:8px; }
+  a { color:#0d9488; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Consentry — FAQ</h1>
+
+  <h2>Does it actually block tracking before consent?</h2>
+  <p>Yes — that is the core of the app. Google Consent Mode v2 signals default to
+  <i>denied</i> the moment the page loads, Shopify-managed pixels respect the recorded consent,
+  and any script you gate with our attribute cannot run until its category is granted.
+  You can verify it yourself: add <code>?consentry_debug=1</code> to any page of your store and
+  watch the live status panel.</p>
+
+  <h2>Will it break my Google Analytics or Ads?</h2>
+  <p>No. Consent is passed to Google through Consent Mode v2, which is Google's own mechanism for
+  measuring with consent. Visitors who accept are measured normally; visitors who decline are not
+  tracked — which is the legal requirement, not a malfunction.</p>
+
+  <h2>How do I set it up?</h2>
+  <p>Install the app, then in the theme editor open <b>App embeds</b> and switch
+  <b>Consentry Cookie Banner</b> on. Set your consent regions under
+  <b>Settings → Customer privacy</b> in your Shopify admin (for example, European Economic Area).
+  That's the whole setup — no code, no theme edits.</p>
+
+  <h2>Why does the banner only show for some visitors?</h2>
+  <p>Consentry asks Shopify whether the visitor's region requires consent, based on your store's
+  Customer privacy settings. Visitors in regions that don't require a banner aren't nagged with one.</p>
+
+  <h2>How can visitors change their mind later?</h2>
+  <p>Three ways: the floating cookie badge (on by default), any link or button you add with the
+  <code>data-consentry-open</code> attribute, and your theme's built-in "Cookie preferences" footer
+  link, which Consentry connects to automatically. Withdrawing consent takes effect immediately.</p>
+
+  <h2>How do I block my own custom scripts (Meta Pixel, TikTok, etc.)?</h2>
+  <p>Wrap the snippet and give it a category. It stays inert until the visitor grants that category:</p>
+  <pre>&lt;script type="text/plain" data-consentry="marketing"&gt;
+  // your pixel code here — runs only after consent
+&lt;/script&gt;</pre>
+
+  <h2>What's the difference between Free and Pro?</h2>
+  <p>Free includes the full consent flow — banner, blocking, region awareness, withdrawal badge,
+  and every text is editable. Pro ($9/month) adds design control: colors, banner position, badge
+  placement, and custom CSS. Compliance is never behind the paywall.</p>
+
+  <h2>What happens if I uninstall?</h2>
+  <p>Everything is removed with the app — the banner is a sandboxed app embed, so no code is ever
+  left in your theme.</p>
+
+  <h2>Still stuck?</h2>
+  <p>Email <a href="mailto:luis.miguel.miguel5967@gmail.com">luis.miguel.miguel5967@gmail.com</a> —
+  include your store URL and, if it's about blocking behavior, a screenshot of the
+  <code>?consentry_debug=1</code> panel. That panel usually answers the question on the spot.</p>
+</div>
+</body>
+</html>
